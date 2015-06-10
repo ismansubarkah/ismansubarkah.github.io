@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Morning Learn</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://ismansubarkah.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://ismansubarkah.github.io" />
+<updated>2015-06-10T09:02:00+07:00</updated>
+<id>http://ismansubarkah.github.io/</id>
+<author>
+  <name>Isman Subarkah</name>
+  <uri>http://ismansubarkah.github.io/</uri>
+  <email>subarkahisman@yahoo.co.id</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (2)]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-2/" />
+  <id>http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-2</id>
+  <published>2015-06-10T00:00:00+07:00</published>
+  <updated>2015-06-10T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;figure&gt;
+	&lt;center&gt;&lt;a href=&quot;/images/ws2012.jpg&quot;&gt;&lt;img src=&quot;/images/ws2012.jpg&quot; /&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+Tulisan &lt;a href=&quot;/blog/2015/06/10/windows-server-2003-1/&quot;&gt;&lt;b&gt;“Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (1)”&lt;/b&gt;&lt;/a&gt; menginformasikan bahwa layanan terhadap Windows Server 2003 akan berakhir. Namun pembaca tidak mengetahui bagaimana atau langkah apa saja yang harus dilakukan agar bisa bermigrasi ke Windows Server yang terbaru. Di bawah ini merupakan langkah-langkah yang harus dilakukan pengguna Windows Server 2003 agar dapat bermigrasi. Pengguna hanya butuh 4 langkah saja untuk melakukannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;1. Discover&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Discover merupakan langkah pendataan dan menginventarisir semua software dan aplikasi yang berjalan pada Windows Server 2003. Pada tahap ini pengguna harus memahami dan mengetahui dengan pasti software atau aplikasi yang berjalan di Windows Server 2003. Pengguna dapat menggunakan aplikasi MAP Toolkit untuk membantu proses pendataan dan penginventarisir. Pengguna dapat menyusun katalog seperti di bawah ini agar memudahkan pengguna dalam pendataan dan inventarisir.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/katalogdis.png&quot;&gt;&lt;img src=&quot;/images/katalogdis.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;
+		Gambar 1 katalog proses Discover
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;2. Assess&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Assess ialah proses pengelompokan aplikasi dan beban kerja yang dimiliki setelah melakukan proses discover. Pengguna dapat mengelompokan aplikasi dan beban kerja menjadi 4 kategori berikut ini:
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;•	Berdasarkan jenis&lt;/b&gt;: Server Roles, aplikasi Microsoft, aplikasi kustom da aplikasi pihak ketiga.
+&lt;br /&gt;&lt;br /&gt; 
+&lt;b&gt;•	Berdasarkan tingkat kekritisan&lt;/b&gt;: mission critical, penting, marginal, atau bisa dipensiunkan.
+&lt;br /&gt;&lt;br /&gt; 
+&lt;b&gt;•	Berdasarkan kompleksitas&lt;/b&gt;: rendah, menengah, dan tinggi.
+&lt;br /&gt;&lt;br /&gt; 
+&lt;b&gt;•	Berdasarkan resiko&lt;/b&gt;: rendah, menengah, dan tinggi.
+&lt;br /&gt;&lt;br /&gt; 
+Dengan pengelompokan seperti ini, pengguna akan mudah menentukan urutan prioritas migrasi. Aplikasi apa yang harus dimigrasi terlebih dahulu, dan apa yang kemudian. Pengguna juga dapat memetakan resiko-resiko yang mungkin muncul saat migrasi dan menyiapkan skenario migrasi terbaik agar bisnis perusahaan tetap berjalan dengan baik.
+Dibawah ini merupakan bentuk katalog yang baru:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/katalogdisnass.png&quot;&gt;&lt;img src=&quot;/images/katalogdisnass.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;
+		Gambar 1 katalog proses Discover &amp;amp; Assesment
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;3. Target&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini, pengguna dapat memilih target migrasi. Adapun target migrasi yang ditawarkan terdapat 4 alternatif, yaitu:
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;•	Windows Server 2012/R2&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;&lt;a href=&quot;blog&quot;&gt;•	Microsoft Windows Azure&lt;/a&gt;&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;•	Office365&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;•	CloudOS Network&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di bawah ini merupakan katalog pada tahap target&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/katalogtar.png&quot;&gt;&lt;img src=&quot;/images/katalogtar.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;
+		Gambar 1 katalog proses Discover, Assesment, dan Target
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;4.	Migrate !&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Migrate merupakan tahapan terakhir setelah pengguna melakukan tahap pendataan &amp;amp; penginventarisir, mengelompokan, dan menentukan target. Pada tahap ini dibutuhkan kepercayaan diri dan skill Pengguna yang ingin bermigrasi. Jika Pengguna masih kurang percaya diri dengan hal tersebut maka pengguna dapat meminta bantuan para Partner Microsoft untuk memigrasikan sistem. Dengan memigrasikan ke sistem yang lebih baru dan canggih, bisnis perusahaan pengguna akan lebih maksimal.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-2/&quot;&gt;Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (2)&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (1)]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-1/" />
+  <id>http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-1</id>
+  <published>2015-06-10T00:00:00+07:00</published>
+  <updated>2015-06-10T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;figure&gt;
+	&lt;center&gt;&lt;a href=&quot;/images/ws2003.jpg&quot;&gt;&lt;img src=&quot;/images/ws2003.jpg&quot; /&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+14 Juli 2015 merupakan hari bersejarah bagi Microsoft. Pada tanggal itu Windows Server 2003 tidak lagi didukung oleh Microsoft dalam artian Windows 2003 akan berakhir. Alasan mengapa Windows Server 2003 diberhentikan adalah karena Windows Server 2012 akan menjadi pengganti bagi Windows Server 2003 / R2. Dibawah ini adalah alasan dan dampak apabila pengguna tidak migrasi dari Windows Server 2003.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;1. No Compliance&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/nocomp.png&quot;&gt;&lt;img src=&quot;/images/nocomp.png&quot; /&gt;&lt;/a&gt;
+	
+	&lt;figcaption&gt;
+		
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;Sumber daya TI pada sebuah perusahaan secara rutin diaudit agar dapat selalu mendukung aktivitas bisnis. Salah satu subjek audit yang vital adalah IT/IS Security. Perusahaan yang masih menggunakan Windows Server 2003/R2 setelah tanggal 14 Juli tidak akan lolos audit. Perusahaan seperti visa dan mastercard tidak akan bersedia untuk bekerja sama dengan perusahaan yang masih menggunakan Windows Server 2003/R2 karena tidak compliance terhadap standari PCI.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;2. No Safe Haven&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/nosafe.png&quot;&gt;&lt;img src=&quot;/images/nosafe.png&quot; /&gt;&lt;/a&gt;
+	
+	&lt;figcaption&gt;
+		
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;Perusahaan yang menggunakan server virtual maupun fisik dan masih menggunakan Windows Server 2003/R2 dan Windows Small Business Server (SBS) 2003 setelah tanggal 14 juli 2015 akan rentan dari sisi keamanan dan tidak akan lolos audit keamanan TI/SI. Biaya operasional akan lebih tinggi untuk merawat hardware yang beranjak tua dan membeli perangkat-perangkat keamanan untuk melindungi server yang masih menggunakan window server 2003/R2.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;3. No Updates&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/noup.png&quot;&gt;&lt;img src=&quot;/images/noup.png&quot; /&gt;&lt;/a&gt;
+	
+	&lt;figcaption&gt;
+		
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;Pada tahun 2013, Microsoft hanya merilis 37 critical updates untuk Windows Server 2003/R2. Namun setelah tanggal 14 Juli 2015 microsoft tidak akan merilis update maupun patch keamanan untuk Windows Server 2003/R2. Sehingga perusahaan yang masih menggunakan windows server 2003 akan rentan menjadi sasaran empuk para hacker.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;4. Migrasi&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;center&gt;
+	&lt;a href=&quot;/images/now.png&quot;&gt;&lt;img src=&quot;/images/now.png&quot; /&gt;&lt;/a&gt;
+	
+	&lt;figcaption&gt;
+		
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;Secara umum, proses migrasi pada perusahaan berskala SMB dapat berlangsung selama 30-60 hari untuk sistem operasi, dan sekitar 90 hari untuk keseluruhan aplikasi hingga semuanya berjalan normal. Terdapat 4 langkah untuk migrasi dari Windows Server 2003/R2. Untuk mengetahui langkah-langkah migrasi dari Windows Server 2003 ke Windows Server 2012 atau Windows Azure, anda dapat mengunjungi langkah-langkah migrasi dari windows server 2003.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-1/&quot;&gt;Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (1)&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Berkenalan dengan Windows Azure (2)]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-2/" />
+  <id>http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-2</id>
+  <published>2015-06-10T00:00:00+07:00</published>
+  <updated>2015-06-10T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/windows-azure.png&quot;&gt;&lt;img src=&quot;/images/windows-azure.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+Tulisan ini melanjutkan tulisan yang telah &lt;a href=&quot;/blog/2015/06/10/berkenalan-dengan-windows-azure-1/&quot;&gt;&lt;b&gt;dibuat&lt;/b&gt;&lt;/a&gt;. Pada tulisan ini akan dipaparkan bagaimana memindahkan blog ke lingkungan Windows Azure. Alasan utama mengapa blog dijadikan bahan percontohan karena migrasi blog ke layanan cloud memerlukan konfigurasi yang cepat.&lt;/p&gt;
+
+&lt;p&gt;Windows Azure memiliki 3 mode untuk fitur website, yaitu free, shared, dan reserved. Pada mode free &amp;amp; shared website berjalan di lingkungan multi-tenant. Artinya sumber daya CPU, memory, dan network digunakan bersama-sama dengan website yang lain. Perbedaannya terletak pada penggunaan sumber daya. Jika mode free yang digunakan, maka penggunaan sumber daya terlalu &lt;i&gt;strict&lt;/i&gt;. Dan pengguna tidak dapat menggunakan &lt;i&gt;custom domain&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fitur yang sangat nyaman yaitu fitur mode reserved. Jika menggunakan mode ini maka website berjalan pada lingkungan dedicated, di mana dengan mode ini alokasi sumber daya CPU, memory, dan network didedikasikan pada website yang mengunakan mode ini. Inilah mode yang digunakan apabila website kita tidak lambat ketika diakses oleh pengunjung website kita. Hal yang menggembirakan dari Windows Azure yaitu bahasa pemrograman yang bisa didukung tidak hanya bahasa pemrograman dari .NET saja melainkan PHP dan NodeJS pun dapat berjalan maksimal pada flatform ini.&lt;/p&gt;
+
+&lt;p&gt;Mode free adalah mode gratis yang diberikan Windows Azure kepada pengguna Windows Azure, sedangkan mode shared &amp;amp; reserved merupakan mode yang diharuskan pengguna untuk membayar setiap bulannya. Akan tetapi dengan fitur ini pengguna dapat menentukan domain website anda, sehingga pengguna memiliki kebebasan dalam menentukan fasilitas website yang di-&lt;i&gt;hosting&lt;/i&gt;. Seperti halnya pengguna menentukan nama domain di-&lt;i&gt;hosting&lt;/i&gt; yang biasa.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-2/&quot;&gt;Berkenalan dengan Windows Azure (2)&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Berkenalan dengan Windows Azure  (1)]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-1/" />
+  <id>http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-1</id>
+  <published>2015-06-10T00:00:00+07:00</published>
+  <updated>2015-06-10T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/windows-azure.png&quot;&gt;&lt;img src=&quot;/images/windows-azure.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;i&gt;Cloud Computing&lt;/i&gt; merupakan istilah teknologi yang akhir-akhir ini banyak diperbincangkan di dunia Teknologi Informasi (TI).&lt;i&gt; Cloud Computing &lt;/i&gt;atau Komputasi Awan bukanlah konsep pemrograman, akan tetapi merupakan konsep pelayanan yang baru dalam dunia TI dengan berbasiskan internet. Dengan model &lt;i&gt;Cloud Computing&lt;/i&gt;, sebuah &lt;i&gt;resource&lt;/i&gt; akan digunakan bersama-sama melalui jaringan internet sebagai suatu layanan bagi para pengguna.&lt;i&gt;Cloud Computing &lt;/i&gt; memberikan keuntungan dalam penyediaan infrastruktur, pembelian infrastruktur dan perawatan infrastruktur khususnya server dapat dihindari. Semua itu ditanggung oleh penyedia layanan &lt;i&gt;Cloud Computing&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Menurut NIST (National Institute of Standards and Technology), sistem dapat dikatakan Cloud Computing jika sistem tersebut memiliki lima karakteristik dibawah ini, yaitu:
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;1. Resource Pooling&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+Sumber daya komputasi (storage, CPU, memory, network bandwidth, dsb.) yang dikumpulkan oleh penyedia layanan (&lt;i&gt;service provider&lt;/i&gt;) untuk memenuhi kebutuhan para pelanggan (&lt;i&gt;service consumers&lt;/i&gt;) dengan model multi-tenant. Sumber daya komputasi ini bisa berupa sumber daya fisik ataupun vitual dan juga bisa dipakai secara dinamis oleh para pelanggan untuk mencukupi kebutuhannya.
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;2. Broad Network Access&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+Kapabilitas layanan dari cloud provider tersedia lewat jaringan dan bisa diakses oleh berbagai jenis perangkat, seperti &lt;i&gt;smartphone&lt;/i&gt;, tablet, laptop, dan &lt;i&gt;workstation&lt;/i&gt;.
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;3. Measured Service&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+Tersedia layanan untuk mengoptimal dan memonitor layanan yang dipakai secara otomatis. Dengan monitoring sistem ini, kita dapat melihat beberapa sumber daya komputasi yang telah digunakan, seperti: bandwidth,  storage,  processing, jumlah pengguna aktif, dsb. Layanan monitoring ini sebagai bentuk transparansi antara &lt;i&gt;cloud computing provider&lt;/i&gt; dengan &lt;i&gt;cloud computing consumer&lt;/i&gt;.
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;4. Rapid Elasticity&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+Kapabilitas dari layanan &lt;i&gt;cloud computing provider&lt;/i&gt; bisa dipakai oleh &lt;i&gt;cloud computing provider&lt;/i&gt; secara dinamis berdasarkan kebutuhan. &lt;i&gt;cloud computing provider&lt;/i&gt; bisa menaikan atau menurunkan kapasitas layanan. Kapasitas layanan yang disediakan ini biasanya tidak terbatas, dan &lt;i&gt;service consumer&lt;/i&gt; bisa dengan bebas dan mudah memilih kapasitas yang diinginkan setiap saat.
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;5. Self Service&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;cloud computing provider&lt;/i&gt; bisa mengkonfigurasikan secara mandiri layanan yang dipakai melalui sebuah sistem, tanpa perlu interaksi manusia dengan pihak &lt;i&gt;cloud computing provider&lt;/i&gt;. Konfigurasi layanan yang dipilih ini harus tersedia segara dan saat itu juga secara otomatis.&lt;/p&gt;
+
+&lt;p&gt;Kelima karakteristik di atas menjadi acuan jika sebuah &lt;i&gt;service provider&lt;/i&gt; ingin disebut sebagai penyedia layanan &lt;i&gt;Cloud Computing&lt;/i&gt;. Jika salah satu komponen tidak ada pada &lt;i&gt;service provider&lt;/i&gt;, maka &lt;i&gt;service provider&lt;/i&gt; tersebut belum bisa dikatakan &lt;i&gt;Cloud Computing&lt;/i&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/azurearch.png&quot;&gt;&lt;img src=&quot;/images/azurearch.png&quot; /&gt;&lt;/a&gt;
+	&lt;center&gt;
+	&lt;figcaption&gt;
+		Gambar 1 Arsitektur Windows Azure
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+Windows Azure merupakan solusi yang ditawarkan oleh pihak Microsoft sebagai penyedia layanan cloud computing. Windows Azure merupakan sebuah platform atau lingkungan yang dirancang oleh Microsoft dengan berbasisikan &lt;i&gt;Platform As a Service &lt;/i&gt;(PaaS). PaaS  adalah sebuah layanan dari Cloud Computing yang intinya memberikan layanan berupa aplikasi dan menawarkan platform yang dibutuhkan untuk pengembangan aplikasi. Peran PaaS sangat mirip dengan SaaS, akan tetapi PaaS sangat memanjakan para pengembang aplikasi dan programmer karena PaaS memungkinkan pengembang-pengembang software atau programmer yang berada di tempat yang berjauhan untuk saling bekerja sama dalam satu platfom dan tidak perlu membuat infrastruktur sendiri untuk mengembangkan sebuah aplikasi spesifik.&lt;/p&gt;
+
+&lt;p&gt;Peran Windows Azure mirip dengan peran &lt;a href=&quot;/blog/2015/06/10/windows-server-2003-1/&quot;&gt;&lt;b&gt;Windows Server 2003&lt;/b&gt;&lt;/a&gt;. Akan tetapi Windows Azure dapat menjawab tantangan &lt;i&gt;Cloud Computing &lt;/i&gt; dengan sangat baik dan apik. Sehingga beberapa fungsionalitas pada Windows Azure ialah hasil adopsi dari kemampunan &lt;a href=&quot;/blog/2015/06/10/windows-server-2003-1/&quot;&gt;&lt;b&gt;Windows Server 2003&lt;/b&gt;&lt;/a&gt; yang terbukti baik oleh para IT Pro. Penjelasan bagaimana menggunakan Microsoft Azure untuk &lt;i&gt;hosting website&lt;/i&gt;, silahkan klik link ini &lt;a href=&quot;/blog/2015/06/10/berkenalan-dengan-windows-azure-2/&quot;&gt;&lt;b&gt;Microsoft Azure 2&lt;/b&gt;&lt;/a&gt;. 
+&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-1/&quot;&gt;Berkenalan dengan Windows Azure  (1)&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Membangun Jaringan AdHoc pada Windows 8]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2013/02/22/membangun-jaringan-adhoc/" />
+  <id>http://ismansubarkah.github.io/blog/2013/02/22/membangun-jaringan-adhoc</id>
+  <published>2013-02-22T00:00:00+07:00</published>
+  <updated>2013-02-22T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;p&gt;Bagi anda, para pengguna laptop yang tidak terlalu sering membuat jaringan lokal secara nirkabel, mungkin postingan ini tidak terlalu bermanfaat. Namun, bagi para &lt;i&gt;Gamer&lt;/i&gt; (pastinya yang menggunakan laptop) yang telah beralih sistem operasi dari Windows XP atau Windows 7 ke Windows 8, hal ini sangatlah bermanfaat, khususnya bagi para &lt;i&gt;Gamer&lt;/i&gt; berbasis LAN contohnya &lt;i&gt;Gamer&lt;/i&gt; Dotta. Fitur Ad-hoc atau AdHoc merupakan sebuah solusi bagi para &lt;i&gt;Gamer&lt;/i&gt; yang ingin bermain game secara bersama-sama namun tidak adanya Hotspot atau sumber daya jaringan apapun yang memungkinkan mereka saling berinteraksi. Fitur AdHoc pada Windows 8 ini memang sedikit disembunyikan oleh pihak Microsoft sendiri. Hal ini tentunya dilakukan oleh Microsoft dengan alasan keamaan bagi pengguna Windows 8 itu sendiri. Akan tetapi kita masih bisa melakukan sedikit konfigurasi dengan mudah untuk mengaktifkannya.&lt;/p&gt;
+
+&lt;h3 id=&quot;langkah-langkah-pengaktifan-jarian-adhoc&quot;&gt;Langkah-langkah Pengaktifan Jarian AdHoc&lt;/h3&gt;
+
+&lt;p&gt;Berikut adalah langkah-langkah untuk mengaktifkan fitur ad-hoc:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buka start screen, atau tekan &lt;b&gt;Windows + Q&lt;/b&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ketikan &lt;code&gt;command&lt;/code&gt; atau &lt;code&gt;cmd&lt;/code&gt; untuk lebih singkat.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pada sisi kiri, anda pasti akan melihat aplikasi Command Prompt.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Klik kanan icon aplikasi tersebut, lalu akan muncul status bar di sisi bawah layar.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pilih mode aplikasi pada &lt;b&gt;Run as Administrator&lt;/b&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kemudian akan muncul peringatan User Account Control, pilih &lt;b&gt;Yes&lt;/b&gt;. Maka Command Prompt akan muncul.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lalu anda ketikan &lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=netadhoc key=12345678&lt;/code&gt;, langsung tekan Enter&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kemudian akan muncul pesan bahwa Hosted Network sudah dalam keadaan allow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Langkah terakhir, anda ketikan &lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;. Yakinlah bahwa jaringan ad-hoc telah sukses diaktifkan. Mudah bukan :-).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;penjelasan-sintaks&quot;&gt;Penjelasan Sintaks&lt;/h3&gt;
+
+&lt;p&gt;Mungkin anda mulai bertanya-tanya mengenai apa maksud perintah yang tadi diberikan. Baiklah, saya akan menjelaskannya. &lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=netadhoc key=12345678&lt;/code&gt; ialah perintah yang kita berikan untuk membuat jaringan ad-hoc dengan nama/SSID netadhoc dan passowrd=12345678. Jadi, jika anda ingin membuat jaringan ad-hoc dengan nama/SSID adalah kamargw dan passwordnya kamargw, anda tinggal ketikan &lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=kamargw key=kamargw&lt;/code&gt;. Untuk perintah &lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;, perintah tersebut berarti kita mulai mengaktifkan jaringan ad-hoc tersebut. Jika anda ingin mematikan/menonaktifkan jaringan ad-hoc, anda tinggal ketikan &lt;code&gt;netsh wlan stop hostednetwork&lt;/code&gt;. Selamat mencoba dan bermain game :-).
+&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2013/02/22/membangun-jaringan-adhoc/&quot;&gt;Membangun Jaringan AdHoc pada Windows 8&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on February 22, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Mengenal Lebih Dalam dengan MS DTC]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2012/08/20/mengenal-lebih-dalam-dengan-MS-DTC/" />
+  <id>http://ismansubarkah.github.io/blog/2012/08/20/mengenal-lebih-dalam-dengan-MS-DTC</id>
+  <published>2012-08-20T00:00:00+07:00</published>
+  <updated>2012-08-20T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;p&gt;Ketika saya ikut dalam pengembangan &lt;i&gt;Software&lt;/i&gt; di sebuah &lt;i&gt;Software House&lt;/i&gt; di Bogor, saya menemukan pesan &lt;i&gt;error&lt;/i&gt; pada laptop. Pesan &lt;i&gt;error&lt;/i&gt; tersebut ialah “MSDTC on server &lt;i&gt;bla bla…&lt;/i&gt;”. Jujur saja, pesan ini merupakan pesan yang baru saya jumpai selama saya mengembangkan &lt;i&gt;software&lt;/i&gt; untuk keperluan tugas kuliah maupun untuk mempelajari hal-hal baru. Karena saya sedang mengembangkan aplikasi yang saya dikatakan berskala &lt;i&gt;Enterprise&lt;/i&gt;, pikiran yang terlintas ialah bahwa laptop saya belum disertai aplikasi atau &lt;i&gt;service&lt;/i&gt; tertentu atau mungkin aplikasi-aplikasi yang sifatnya &lt;i&gt;Third Party&lt;/i&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;apa-itu-ms-dtc-&quot;&gt;Apa itu MS DTC ?&lt;/h3&gt;
+
+&lt;p&gt;“Apa sih MS DTC  ?”. Pertanyaan tersebut adalah pertanyaan yang muncul di benak saya. Setelah saya membaca informasi di dunia maya dan membaca buku tentang MS DTC, saya langsung berkesimpulan bahwa MS DTC merupakan sebuah &lt;i&gt;service&lt;/i&gt; yang disediakan oleh sistem operasi windows agar aplikasi di dalamnya dapat bekerja dengan beberapa sumber data di dalam sebuah transaksi. MS DTC adalah singkatan dari Microsoft Distributed Transaction Coordinator. Mungkin untuk lebih jelasnya, saya akan memberikan kutipan mengenai apa itu MS DTC menurut William R. Stanek dalam bukunya SQL Server 2005 Administrator’s Pocket Consultant. Microsoft Distributed Transaction Coordinator adalah sebuah manajer atau pengelola transaksi yang memungkinkan aplikasi-aplikasi bekerja dengan beberapa sumber data di dalam sebuah transaksi (Stanek 2005).&lt;/p&gt;
+
+&lt;h3 id=&quot;fungsi-dari-ms-dtc&quot;&gt;Fungsi dari MS DTC&lt;/h3&gt;
+
+&lt;p&gt;Fungsi dari MS DTC ialah ketika sebuah transaksi terdistribusi (&lt;i&gt;Distributed Transaction&lt;/i&gt;) mencakup dua server atau lebih, server-server tersebut akan melakukan koordinasi untuk manajemen transaksi menggunakan MS DTC. Namun, apabila sebuah transaksi terdistribusi hanya mencakup satu server saja, aplikasi-aplikasi SQL Server akan mengelola transaksi-transaksi tersebut secara internal. Aplikasi-aplikasi SQL Server bisa memanggil MS DTC secara langsung untuk memulai menjalankan sebuah transaksi terdistribusi yang eksplisit. Transaksi-transaksi terdistribusi juga bisa dimulai secara implisit dengan menggunakan salah satu dari metode-metode berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Memanggil Stored Procedures pada server-server remote yang menjalankan SQL Server&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Meng-&lt;i&gt;update&lt;/i&gt; data pada beberapa sumber data OLE DB&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Menggabungkan server-server remote pada sebuah transaksi&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ternyata, setelah saya mengetahui apa itu MS DTC lantas saya langsung melihat kode program pada &lt;i&gt;Data Access Layer&lt;/i&gt;. Pada &lt;i&gt;Data Access Layer&lt;/i&gt; aplikasi yang sedang saya kembangkan, saya melihat bahwa terdapat beberapa kode program yang fungsinya melakukan transaksi dalam proses manipulasi data seperti proses &lt;i&gt;create&lt;/i&gt;, &lt;i&gt;update&lt;/i&gt;, dan &lt;i&gt;delete&lt;/i&gt;. Hal inilah yang menyebabkan pesan error tersebut muncul apabila MS DTC tidak diaktifkan.&lt;/p&gt;
+
+&lt;h3 id=&quot;langkah-langkah-pengaktifan-ms-dtc&quot;&gt;Langkah-langkah Pengaktifan MS DTC&lt;/h3&gt;
+
+&lt;p&gt;Untuk mengaktifkan &lt;i&gt;service&lt;/i&gt; MS DTC, pembaca dapat melakukannya dengan langkah-langkah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tekan Windows + r atau Windows + R, untuk memunculkan run.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kemudian ketikan kata ‘services.msc’ untuk memanggil Management Console untuk &lt;i&gt; Service Management&lt;/i&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lalu carilah &lt;i&gt;service&lt;/i&gt; dengan nama Distributed Transaction Coordinator. Apabila &lt;i&gt;service&lt;/i&gt; tersebut telah ditemukan, klik kanan &lt;i&gt;service&lt;/i&gt; tersebut kemudian pilih Start.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/msdtc.png&quot;&gt;&lt;img src=&quot;/images/msdtc.png&quot; /&gt;&lt;/a&gt;
+	&lt;center&gt;
+	&lt;figcaption&gt;
+		Gambar 1
+	&lt;/figcaption&gt;
+	&lt;/center&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Gambar 1 merupakan gambar yang mendeskripsikan cara pengaktifan MS DTC dengan menggunakan Windows Management Console. Semoga tulisan ini bermanfaat bagi pembaca. 
+&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2012/08/20/mengenal-lebih-dalam-dengan-MS-DTC/&quot;&gt;Mengenal Lebih Dalam dengan MS DTC&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on August 20, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Back-up Database menggunakan T-SQL]]></title>
+  <link rel="alternate" type="text/html" href="http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/" />
+  <id>http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql</id>
+  <published>2012-03-14T00:00:00+07:00</published>
+  <updated>2012-03-14T00:00:00+07:00</updated>
+  <author>
+    <name>Isman Subarkah</name>
+    <uri>http://ismansubarkah.github.io</uri>
+    <email>subarkahisman@yahoo.co.id</email>
+  </author>
+  <content type="html">&lt;p&gt;Pada tulisan kali ini, saya ingin berbagi ilmu mengenai bagaimana caranya melakukan proses &lt;i&gt;back up database&lt;/i&gt; SQL Server dengan menggunakan T-SQL (Transact SQL). Pertanyaan yang mungkin muncul adalah mengapa harus memakai T-SQL, kan sudah ada cara-cara teknis yang dapat melakukannya. Mungkin alasan klasik yang terlontar adalah bahwa saya dan mungkin rekan-rekan yang sedang membaca lebih senang berkutat dengan kode-kode program ketimbang langkah-langkah teknis yang semua orang pasti bisa melakukannya. Jadi, kalau memakai T-SQL terlihat lebih ‘gentle’ apabila kita berperan sebagai seorang Programmer atau &lt;i&gt;Developer&lt;/i&gt; :-). Alasan lain yang juga muncul ialah dengan T-SQL diharapkan kita dapat membuat aplikasi yang dapat melakukan proses &lt;i&gt;back up&lt;/i&gt; tanpa harus menggunakan SQLCMD &lt;i&gt;Console&lt;/i&gt; atau SQL Server Management Studio. Pada eksperimen kali ini, saya akan menggunakan Northwind sebagai &lt;i&gt;database&lt;/i&gt; yang akan di-&lt;i&gt;back up&lt;/i&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Northwind&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;GO&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathdestinationbackupfile&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathdestinationbackupfile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;C:\DatabaseBackup\&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$(DBName)&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;DB-&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATENAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GETDATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATENAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GETDATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATENAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GETDATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.BAK&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BACKUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DATABASE&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DBName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DISK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathdestinationbackupfile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Kode di atas merupakan contoh penerapan kode T-SQL untuk melakukan &lt;i&gt;back up database&lt;/i&gt;. Di bawah ini adalah penjelasan setiap &lt;i&gt;line&lt;/i&gt; pada kode tersebut.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;i&gt;line&lt;/i&gt; 1  : Perintah untuk menyatakan &lt;i&gt;database&lt;/i&gt; yang akan diberi perintah T-SQL atau &lt;i&gt;script&lt;/i&gt; yang digunakan untuk menyatakan &lt;i&gt;database&lt;/i&gt; yang akan diberi perintah.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;i&gt;line&lt;/i&gt; 3 : Perintah untuk menyatakan bahwa kode sebelumnya dijalankan, kemudian  terdapat kode lagi yang akan dijalankan.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;i&gt;line&lt;/i&gt; 5 : Perintah untuk mendeklarasikan variabel &lt;code&gt;@pathdestinationbackupfile&lt;/code&gt; yang berguna untuk menyimpan path tempat kita akan menyimpan &lt;i&gt;file back up&lt;/i&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;i&gt;line&lt;/i&gt; 7 :  Perintah &lt;i&gt;assignment&lt;/i&gt; terhadap variabel &lt;code&gt;@pathdestinationbackupfile&lt;/code&gt;. Nilai yang di-&lt;i&gt;assign&lt;/i&gt; adalah nama &lt;i&gt;file&lt;/i&gt; yang akan dibentuk. &lt;i&gt;line&lt;/i&gt; 7 sampai &lt;i&gt;line&lt;/i&gt; 15 adalah &lt;i&gt;script&lt;/i&gt; yang menjadi satu kesatuan perintah.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;i&gt;line&lt;/i&gt; 17 &amp;amp; &lt;i&gt;line&lt;/i&gt; 18 : Perintah untuk melakukan &lt;i&gt;back up database&lt;/i&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sekian untuk tutorial ini, Semoga bermanfaat :-).
+&lt;br /&gt;&lt;br /&gt;
+&lt;i&gt;Keep Learning&lt;/i&gt; !
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/&quot;&gt;Back-up Database menggunakan T-SQL&lt;/a&gt; was originally published by Isman Subarkah at &lt;a href=&quot;http://ismansubarkah.github.io&quot;&gt;Morning Learn&lt;/a&gt; on March 14, 2012.&lt;/p&gt;</content>
+</entry>
+
+</feed>

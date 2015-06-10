@@ -1,0 +1,290 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Back-up Database menggunakan T-SQL &#8211; Morning Learn</title>
+<meta name="description" content="Tutorial back-up SQL Server database menggunakan T-SQL.">
+<meta name="keywords" content="database, intermediate, tsql, transact-sql, tutorial">
+<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content=
+			
+				
+						"http://ismansubarkah.github.io/images/"
+				
+			
+		>
+	
+	<meta name="twitter:title" content="Back-up Database menggunakan T-SQL">
+	<meta name="twitter:description" content="Tutorial back-up SQL Server database menggunakan T-SQL.">
+	<meta name="twitter:creator" content="@ismansubarkah">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Back-up Database menggunakan T-SQL">
+<meta property="og:description" content="Tutorial back-up SQL Server database menggunakan T-SQL.">
+<meta property="og:url" content="http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/">
+<meta property="og:site_name" content="Morning Learn">
+
+
+
+
+
+<link rel="canonical" href="http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/">
+<link href="http://ismansubarkah.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Morning Learn Feed">
+<link rel="author" href="http://plus.google.com/+ismansubarkah?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+
+<link href='http://ismansubarkah.github.io/assets/css/droidserif.css' rel='stylesheet' type='text/css'>
+<link href='http://ismansubarkah.github.io/assets/css/opensans.css' rel='stylesheet' type='text/css'>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://ismansubarkah.github.io/assets/css/main.min.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://ismansubarkah.github.io/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://ismansubarkah.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://ismansubarkah.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" async></script>
+<script>window.jQuery || document.write('<script src="http://ismansubarkah.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://ismansubarkah.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://ismansubarkah.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://ismansubarkah.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://ismansubarkah.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://ismansubarkah.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://ismansubarkah.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://ismansubarkah.github.io">Morning Learn</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				<li>
+					<a href="http://ismansubarkah.github.io/" >Blog</a>
+				</li>
+		        
+				<li>
+					<a href="http://ismansubarkah.github.io/archives/" >Archives</a>
+				</li>
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+	<img src="http://ismansubarkah.github.io/images/isman.jpg" class="bio-photo" alt="Isman Subarkah bio photo"></a>
+
+<h3>Isman Subarkah</h3>
+<p>Just A Software Developer and Blogger.</p>
+<a href="http://twitter.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-facebook-square" style="color: blue"></i> Facebook</a>
+<a href="http://plus.google.com/+ismansubarkah" class="author-social" target="_blank"><i class="fa fa-google-plus-square"></i> Google+</a>
+
+
+
+<a href="http://github.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/" rel="bookmark" title="Back-up Database menggunakan T-SQL">Back-up Database menggunakan T-SQL</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+	
+	
+    <div class="article-wrap">
+      <p>Pada tulisan kali ini, saya ingin berbagi ilmu mengenai bagaimana caranya melakukan proses <i>back up database</i> SQL Server dengan menggunakan T-SQL (Transact SQL). Pertanyaan yang mungkin muncul adalah mengapa harus memakai T-SQL, kan sudah ada cara-cara teknis yang dapat melakukannya. Mungkin alasan klasik yang terlontar adalah bahwa saya dan mungkin rekan-rekan yang sedang membaca lebih senang berkutat dengan kode-kode program ketimbang langkah-langkah teknis yang semua orang pasti bisa melakukannya. Jadi, kalau memakai T-SQL terlihat lebih ‘gentle’ apabila kita berperan sebagai seorang Programmer atau <i>Developer</i> :-). Alasan lain yang juga muncul ialah dengan T-SQL diharapkan kita dapat membuat aplikasi yang dapat melakukan proses <i>back up</i> tanpa harus menggunakan SQLCMD <i>Console</i> atau SQL Server Management Studio. Pada eksperimen kali ini, saya akan menggunakan Northwind sebagai <i>database</i> yang akan di-<i>back up</i></p>
+
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="lineno"> 1</span> <span class="n">USE</span> <span class="n">Northwind</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="k">GO</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span> <span class="k">DECLARE</span> <span class="o">@</span><span class="n">pathdestinationbackupfile</span> <span class="k">as</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="k">MAX</span><span class="p">)</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="k">SET</span> <span class="o">@</span><span class="n">pathdestinationbackupfile</span> <span class="o">=</span> <span class="s1">&#39;C:\DatabaseBackup\&#39;</span>
+<span class="lineno"> 8</span> <span class="o">+</span> <span class="s1">&#39;$(DBName)&#39;</span>
+<span class="lineno"> 9</span> <span class="o">+</span> <span class="s1">&#39;DB-&#39;</span>
+<span class="lineno">10</span> <span class="o">+</span> <span class="n">DATENAME</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">GETDATE</span><span class="p">())</span>
+<span class="lineno">11</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span>
+<span class="lineno">12</span> <span class="o">+</span> <span class="n">DATENAME</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">GETDATE</span><span class="p">())</span>
+<span class="lineno">13</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span>
+<span class="lineno">14</span> <span class="o">+</span> <span class="n">DATENAME</span><span class="p">(</span><span class="n">yy</span><span class="p">,</span> <span class="n">GETDATE</span><span class="p">())</span>
+<span class="lineno">15</span> <span class="o">+</span> <span class="s1">&#39;.BAK&#39;</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="n">BACKUP</span> <span class="k">DATABASE</span> <span class="err">$</span><span class="p">(</span><span class="n">DBName</span><span class="p">)</span>
+<span class="lineno">18</span> <span class="k">TO</span> <span class="n">DISK</span> <span class="o">=</span> <span class="o">@</span><span class="n">pathdestinationbackupfile</span></code></pre></div>
+
+<p>Kode di atas merupakan contoh penerapan kode T-SQL untuk melakukan <i>back up database</i>. Di bawah ini adalah penjelasan setiap <i>line</i> pada kode tersebut.</p>
+
+<ul>
+  <li>
+    <p><i>line</i> 1  : Perintah untuk menyatakan <i>database</i> yang akan diberi perintah T-SQL atau <i>script</i> yang digunakan untuk menyatakan <i>database</i> yang akan diberi perintah.</p>
+  </li>
+  <li>
+    <p><i>line</i> 3 : Perintah untuk menyatakan bahwa kode sebelumnya dijalankan, kemudian  terdapat kode lagi yang akan dijalankan.</p>
+  </li>
+  <li>
+    <p><i>line</i> 5 : Perintah untuk mendeklarasikan variabel <code>@pathdestinationbackupfile</code> yang berguna untuk menyimpan path tempat kita akan menyimpan <i>file back up</i>.</p>
+  </li>
+  <li>
+    <p><i>line</i> 7 :  Perintah <i>assignment</i> terhadap variabel <code>@pathdestinationbackupfile</code>. Nilai yang di-<i>assign</i> adalah nama <i>file</i> yang akan dibentuk. <i>line</i> 7 sampai <i>line</i> 15 adalah <i>script</i> yang menjadi satu kesatuan perintah.</p>
+  </li>
+  <li>
+    <p><i>line</i> 17 &amp; <i>line</i> 18 : Perintah untuk melakukan <i>back up database</i>.</p>
+  </li>
+</ul>
+
+<p>Sekian untuk tutorial ini, Semoga bermanfaat :-).
+<br /><br />
+<i>Keep Learning</i> !
+<br /><br /><br /></p>
+
+	  <center>
+	  <section class="social-icons" style="margin: 10px;">
+		
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/" title="Share on Facebook"><span aria-hidden="true" class="icon-facebook" style="color: blue;"></span></a>
+		
+		<a href="https://plus.google.com/share?url=http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/" title="Share on Google Plus"><span aria-hidden="true" class="icon-gplus" style="color: red;"></span></a>
+		
+		<a href="https://twitter.com/intent/tweet?text=http://ismansubarkah.github.io/blog/2012/03/14/back-up-database-menggunakan-tsql/" title="Share on Twitter"><span aria-hidden="true" class="icon-twitter" style="color: skyblue;"></span></a>
+		
+	  </section> <!-- /.social-icons -->
+	  </center>
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="http://ismansubarkah.github.io/images/isman.jpg" class="bio-photo" alt="Isman Subarkah bio photo"></a>
+
+<h3>Isman Subarkah</h3>
+<p>Just A Software Developer and Blogger.</p>
+<a href="http://twitter.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-facebook-square" style="color: blue"></i> Facebook</a>
+<a href="http://plus.google.com/+ismansubarkah" class="author-social" target="_blank"><i class="fa fa-google-plus-square"></i> Google+</a>
+
+
+
+<a href="http://github.com/ismansubarkah" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+        </div> <!-- /.article-author-bottom -->
+        <p class="byline"><strong>Back-up Database menggunakan T-SQL</strong> was published on <time datetime="2012-03-14T00:00:00+07:00">March 14, 2012</time> by <a href="http://ismansubarkah.github.io/about" title="About Isman Subarkah">Isman Subarkah</a>.</p>
+      </footer> 
+    </div><!-- /.article-wrap -->
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://ismansubarkah.github.io/archives/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-2/" title="Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (2)">Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (2)</a></li>
+    
+      <li><a href="http://ismansubarkah.github.io/blog/2015/06/10/windows-server-2003-1/" title="Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (1)">Windows Server 2003 akan dihentikan pada tanggal 14 Juli 2015 (1)</a></li>
+    
+      <li><a href="http://ismansubarkah.github.io/blog/2015/06/10/berkenalan-dengan-windows-azure-2/" title="Berkenalan dengan Windows Azure (2)">Berkenalan dengan Windows Azure (2)</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    <center><span>All of The <a href="/">Blog's Articles</a> are Under <a href="http://creativecommons.org/licenses/by-sa/3.0/" >Creative Commons</a> License Unless Stated Otherwise. Everything Else is &copy;</span></center>
+
+<!-- <center><p>All content copyright <a href="/">Isman Subarkah</a> &copy; 2015 &bull; All rights reserved.</p></center> -->
+
+<!-- <span>&copy; 2015 Isman Subarkah. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span> -->
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://ismansubarkah.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<script src="http://ismansubarkah.github.io/assets/js/search.posts.js"></script>
+
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ismansubarkah'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>
